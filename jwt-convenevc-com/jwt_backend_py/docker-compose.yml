@@ -1,0 +1,21 @@
+version: '3.5'
+
+services:
+    
+    jwt-auth:
+        build: ./jwt-auth
+        ports:
+            - 5000:5000
+        volumes:
+            - ./jwt-auth:/app
+        environment:
+            JWT_APP_ID: 'app_id_convene_vc_for_jwt'
+            JWT_SUB: 'next'
+            ROOM_NAME: 'SampleRoom'
+            JWT_APP_SECRET: 'dappd501secret26eeeconvenve51ae374268910fvc37d1jwtd751'
+
+            AVATAR_URL: 'https://example.com/avatar.jpg'
+            USER_NAME: 'John Doe'
+            USER_EMAIL: 'john@example.com'
+            DOMAIN: 'https://next.convenevc.com/'
+
